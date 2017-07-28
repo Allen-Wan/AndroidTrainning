@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/activity_view_anim"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.ex_wanzhipeng001.demo_java.animations.ViewAnimActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/test1"
+                android:id="@+id/iv_viewAnimRotate"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+            <ImageView
+                android:src="@drawable/test2"
+                android:id="@+id/iv_viewAnimScale"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+
+            <ImageView
+                android:src="@drawable/test3"
+                android:id="@+id/iv_viewAnimAlpha"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+
+            <ImageView
+                android:src="@drawable/test4"
+                android:id="@+id/iv_viewAnimTranslate"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/iv_viewAnimSet"
+                android:layout_width="150dp"
+                android:layout_height="150dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.example.ex_wanzhipeng001.demo_java"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+        <activity
+            android:name=".main.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".basis.android.BroadCastReceiverActivity"/>
+        <activity android:name=".basis.android.BasisMainActivity"/>
+        <activity
+            android:name=".basis.android.PercentActivity"
+            android:label="@string/title_activity_percent"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".basis.java.TestJavaActivity">
+        </activity>
+        <activity android:name=".basis.android.UIComponentsActivity">
+        </activity>
+        <activity android:name=".basis.android.ContentProviderActivity">
+        </activity>
+        <activity android:name=".basis.android.RuntimePermissionActivity">
+        </activity>
+        <activity android:name=".basis.android.NotificationActivity">
+        </activity>
+        <activity android:name=".basis.android.NotificationDetailsActivity">
+        </activity>
+        <activity android:name=".basis.android.CameraActivity">
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.ex_wanzhipeng001.demo_java.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity android:name=".basis.android.MediaActivity">
+        </activity>
+        <activity android:name=".basis.android.ServiceActivity">
+        </activity>
+
+        <service
+            android:name=".basis.android.MyService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <service
+            android:name=".basis.android.MyIntentService"
+            android:exported="false">
+        </service>
+
+        <activity android:name=".basis.android.AlarmManagerActivity">
+        </activity>
+        <activity android:name=".basis.android.WebViewActivity">
+        </activity>
+        <activity android:name=".basis.android.XMLAndGsonActivity">
+        </activity>
+        <activity android:name=".views.ViewsMainActivity"/>
+        <activity android:name=".views.customviews.test.TopBarTestActivity"/>
+        <activity android:name=".views.customviews.test.CircleProgressTestActivity">
+        </activity>
+        <activity android:name=".views.customviews.test.VolumeTestActivity">
+        </activity>
+        <activity android:name=".views.customviews.test.ScrollViewTestActivity">
+        </activity>
+        <activity android:name=".animations.AnimationMainActivity">
+        </activity>
+        <activity android:name=".animations.ViewAnimActivity">
+        </activity>
+        <activity android:name=".animations.ObjectAnimActivity">
+        </activity>
+        <activity android:name=".animations.DropTest">
+        </activity>
+        <activity android:name=".animations.TimerTest">
+        </activity>
+        <activity android:name=".animations.PropertyTest">
+        </activity>
+        <activity android:name=".views.customviews.test.SearchViewTestActivity">
+        </activity>
+        <activity android:name=".views.astemplate.TemplateActivityTestActivity">
+        </activity>
+        <activity
+            android:name=".views.astemplate.BasicActivity"
+            android:label="@string/title_activity_basic"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".views.astemplate.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme">
+        </activity>
+        <!-- This meta-data tag is required to use Google Play Services. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity
+            android:name=".views.astemplate.GoogleADMobsAdsActivity"
+            android:label="@string/title_activity_google_admobs_ads">
+        </activity> <!-- Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent"/>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
+
+        <activity
+            android:name=".views.astemplate.GoogleMapsActivity"
+            android:label="@string/title_activity_google_maps">
+        </activity>
+        <activity
+            android:name=".views.astemplate.LoginActivity"
+            android:label="@string/title_activity_login">
+        </activity>
+        <activity
+            android:name=".views.astemplate.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".views.astemplate.SettingsActivity"
+            android:label="@string/title_activity_settings">
+        </activity>
+        <activity
+            android:name=".views.astemplate.TabbedActivity"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".views.astemplate.ItemListActivity"
+            android:label="@string/title_item_list"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".views.astemplate.ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".views.astemplate.ItemListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ex_wanzhipeng001.demo_java.views.astemplate.ItemListActivity"/>
+        </activity>
+    </application>
+
+</manifest>
