@@ -9,8 +9,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ex_wanzhipeng001.demo_java.R;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -40,7 +42,15 @@ public class TestJavaActivity extends AppCompatActivity {
 //        testNewString();
 //        testEquals();
 //        textTextView();
-        testRemove();
+//        testRemove();
+//        testSortString();
+    }
+
+    private void testSortString() {
+        String[] strings = new String[]{"288 - 上海分公司","203 - 广东分公司","205 - 深圳分公司","101 - 山东分公司","20580 - 罗湖分公司"};
+        Log.e(TAG, "beforeSort="+new Gson().toJson(strings));
+        Arrays.sort(strings);
+        Log.e(TAG, "afterSort="+new Gson().toJson(strings));
     }
 
     private void testRemove() {

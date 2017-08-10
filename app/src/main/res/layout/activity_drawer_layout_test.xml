@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/person_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <!--侧拉  抽屉  -->
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--内容视图-->
+        <FrameLayout
+            android:background="#000"
+            android:id="@+id/frame_person_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!--左侧滑菜单栏-->
+        <!--<ListView-->
+        <!--android:id="@+id/listview_person_main_left_drawer"-->
+        <!--android:layout_width="160dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:background="@drawable/main_drawer_bg" />-->
+
+        <!--左侧滑菜单栏-->
+        <include
+            layout="@layout/drawer_menu_layout"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"/>
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>

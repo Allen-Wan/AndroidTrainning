@@ -187,6 +187,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ex_wanzhipeng001.demo_java.views.astemplate.ItemListActivity"/>
         </activity>
+        <activity android:name=".views.customviews.test.recyclerview.DrawerLayoutTestActivity">
+        </activity>
     </application>
 
 </manifest>
