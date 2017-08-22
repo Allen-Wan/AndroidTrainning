@@ -189,6 +189,13 @@
         </activity>
         <activity android:name=".views.customviews.test.recyclerview.DrawerLayoutTestActivity">
         </activity>
+        <activity android:name=".tools.anti_hijack.AntiHijackActivity"/>
+        <activity android:name=".tools.eventbus.EventBusSubscriberActivity"/>
+        <activity android:name=".tools.ToolsMainActivity"/>
+        <activity android:name=".tools.eventbus.EventBusPublisherActivity">
+        </activity>
+        <activity android:name=".tools.eventbus.EventBusStickyModeActivity">
+        </activity>
     </application>
 
 </manifest>

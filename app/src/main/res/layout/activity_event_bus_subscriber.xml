@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_event_bus"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ex_wanzhipeng001.demo_java.tools.eventbus.EventBusSubscriberActivity">
+
+
+    <Button
+        android:id="@+id/btn_go2Publisher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="btn_go2Publisher"/>
+
+    <Button
+        android:id="@+id/btn_go2PublisherSticky"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="btn_go2PublisherSticky"/>
+</LinearLayout>

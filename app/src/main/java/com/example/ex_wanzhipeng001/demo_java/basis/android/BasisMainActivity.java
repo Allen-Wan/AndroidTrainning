@@ -58,7 +58,6 @@ public class BasisMainActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_testJava:
-//                mBtnTestJava.setText(title);
                 Intent intent = new Intent(BasisMainActivity.this, TestJavaActivity.class);
                 startActivity(intent);
                 break;
