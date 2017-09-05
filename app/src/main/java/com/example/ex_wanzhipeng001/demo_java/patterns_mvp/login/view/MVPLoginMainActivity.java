@@ -1,4 +1,4 @@
-package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.view;
+package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +9,12 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.ex_wanzhipeng001.demo_java.R;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.presenter.LoginPresenterCompl;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.presenter.LoginPresenterCompl;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class PatternMainActivity extends AppCompatActivity implements ILoginView,View.OnClickListener {
+public class MVPLoginMainActivity extends AppCompatActivity implements ILoginView,View.OnClickListener {
 
     @BindView(R.id.et_username)
     EditText mEtUsername;

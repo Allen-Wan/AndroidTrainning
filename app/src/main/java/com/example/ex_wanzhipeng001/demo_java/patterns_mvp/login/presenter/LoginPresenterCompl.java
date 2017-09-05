@@ -1,11 +1,11 @@
-package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.presenter;
+package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.presenter;
 
 import android.os.Handler;
 import android.os.Looper;
 
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.model.IUserModel;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.model.UserModel;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.view.ILoginView;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.model.IUserModel;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.model.impl.UserModel;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.view.ILoginView;
 
 /**
  * Created by ex-wanzhipeng001 on 17/9/4.

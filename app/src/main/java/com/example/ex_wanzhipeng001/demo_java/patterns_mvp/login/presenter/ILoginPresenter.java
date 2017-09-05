@@ -1,4 +1,4 @@
-package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.presenter;
+package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.presenter;
 
 /**
  * Created by ex-wanzhipeng001 on 17/9/4.

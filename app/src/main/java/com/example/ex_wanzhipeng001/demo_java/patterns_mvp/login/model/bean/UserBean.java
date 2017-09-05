@@ -1,4 +1,4 @@
-package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.bean;
+package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.model.bean;
 
 /**
  * Created by ex-wanzhipeng001 on 17/9/4.

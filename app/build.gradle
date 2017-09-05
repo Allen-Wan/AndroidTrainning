@@ -54,4 +54,6 @@ dependencies {
     annotationProcessor 'com.zhy:mpermission-compiler:1.0.0'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+//    compile 'com.mcxiaoke.volley:library:1.0.19' ---mvp_weatherProject用这个版本的Volley会报错。。。奇怪了。
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
 }

@@ -19,7 +19,7 @@ import com.example.ex_wanzhipeng001.demo_java.R;
 import com.example.ex_wanzhipeng001.demo_java.animations.AnimationMainActivity;
 import com.example.ex_wanzhipeng001.demo_java.basis.android.BasisMainActivity;
 import com.example.ex_wanzhipeng001.demo_java.libs.LibsMainActivity;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.view.PatternMainActivity;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.PatternMainActivity;
 import com.example.ex_wanzhipeng001.demo_java.views.ViewsMainActivity;
 
 public class MainActivity extends AppCompatActivity

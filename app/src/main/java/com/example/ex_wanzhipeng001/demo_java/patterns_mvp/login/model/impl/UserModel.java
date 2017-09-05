@@ -1,12 +1,14 @@
-package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.model;
+package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.model.impl;
 
 import android.text.TextUtils;
+
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.model.IUserModel;
 
 /**
  * Created by ex-wanzhipeng001 on 17/9/5.
  */
 
-public class UserModel implements  IUserModel{
+public class UserModel implements IUserModel {
 
     private String username;
     private String password;
