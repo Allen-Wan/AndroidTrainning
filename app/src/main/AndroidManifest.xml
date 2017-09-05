@@ -189,12 +189,16 @@
         </activity>
         <activity android:name=".views.customviews.test.recyclerview.DrawerLayoutTestActivity">
         </activity>
-        <activity android:name=".tools.anti_hijack.AntiHijackActivity"/>
-        <activity android:name=".tools.eventbus.EventBusSubscriberActivity"/>
-        <activity android:name=".tools.ToolsMainActivity"/>
-        <activity android:name=".tools.eventbus.EventBusPublisherActivity">
+        <activity android:name=".libs.anti_hijack.AntiHijackActivity"/>
+        <activity android:name=".libs.eventbus.EventBusSubscriberActivity"/>
+        <activity android:name=".libs.LibsMainActivity"/>
+        <activity android:name=".libs.eventbus.EventBusPublisherActivity">
         </activity>
-        <activity android:name=".tools.eventbus.EventBusStickyModeActivity">
+        <activity android:name=".libs.eventbus.EventBusStickyModeActivity">
+        </activity>
+        <activity android:name=".libs.constraintlayout.ConstraintLayoutActivity">
+        </activity>
+        <activity android:name=".patterns_mvp.view.PatternMainActivity">
         </activity>
     </application>
 

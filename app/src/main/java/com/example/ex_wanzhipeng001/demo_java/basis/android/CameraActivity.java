@@ -52,14 +52,20 @@ public class CameraActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.btn_camera,R.id.select_camera})
-    public void onClick(View v){
+    public void onClick(View v) throws IllegalStateException {
         if (v.getId() == R.id.btn_camera) {
             File file = new File(getExternalCacheDir(),"img.jpg");
             if (file.exists()) {
-                file.delete();
+                boolean delete = file.delete();
+                if (!delete) {
+                    throw new IllegalStateException("文件删除失败");
+                }
             }
             try {
-                file.createNewFile();
+                boolean newFile = file.createNewFile();
+                if (!newFile) {
+                    throw  new IllegalStateException("创建文件失败");
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -100,6 +106,9 @@ public class CameraActivity extends AppCompatActivity {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     openAlbum();
                 }
+                break;
+            default:
+                break;
         }
     }
 
@@ -169,8 +178,8 @@ public class CameraActivity extends AppCompatActivity {
                 String selction = MediaStore.Images.Media._ID+"="+id;
                 imagePath = getImgPath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,selction);
             }else if ("com.android.providers.downloads.documents".equals(uri.getAuthority())){
-                Uri contentUri = ContentUris.withAppendedId(Uri.parse("content://downloads/public_downloads"),Long
-                        .valueOf(documentId));
+                Uri parse = Uri.parse("content://downloads/public_downloads");
+                Uri contentUri = ContentUris.withAppendedId(parse,Long.parseLong(documentId));
                 imagePath = getImgPath(contentUri,null);
             }else if("content".equalsIgnoreCase(uri.getScheme())){
                 imagePath = getImgPath(uri,null);

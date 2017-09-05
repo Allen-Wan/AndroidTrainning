@@ -75,6 +75,8 @@ public class ContentProviderActivity extends AppCompatActivity {
                     Toast.makeText(this, "denied", Toast.LENGTH_SHORT).show();
                 }
                 break;
+            default:
+                break;
         }
     }
 }

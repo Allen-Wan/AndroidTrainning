@@ -63,7 +63,7 @@ public class MyService extends Service {
         super.onDestroy();
     }
 
-    class DownloadBinder extends Binder {
+    class  DownloadBinder extends Binder {
         public void startDownload(){
             Log.d("DownloadBinder", "start");
         }

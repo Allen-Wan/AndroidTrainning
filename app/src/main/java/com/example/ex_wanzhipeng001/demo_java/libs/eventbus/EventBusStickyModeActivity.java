@@ -1,4 +1,4 @@
-package com.example.ex_wanzhipeng001.demo_java.tools.eventbus;
+package com.example.ex_wanzhipeng001.demo_java.libs.eventbus;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

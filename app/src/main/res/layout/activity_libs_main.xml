@@ -33,6 +33,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="btn_testEventBus"/>
+
+            <Button
+                android:id="@+id/btn_constraintLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="btn_constraintLayout"/>
         </LinearLayout>
     </ScrollView>
 

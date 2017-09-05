@@ -80,14 +80,14 @@ public class BroadCastReceiverActivity extends AppCompatActivity {
         }
     }
 
-    private class ScreenToggleReceiver extends BroadcastReceiver {
+    private  class ScreenToggleReceiver extends BroadcastReceiver {
         @Override
         public void onReceive(Context context, Intent intent) {
             PowerManager manager = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
             Log.e("==",intent.getAction()+"---manager.isScreenOn():" + manager.isScreenOn());
         }
     }
-    private class LocalReceiver extends  BroadcastReceiver{
+    private  class LocalReceiver extends  BroadcastReceiver{
         @Override
         public void onReceive(Context context, Intent intent) {
             Toast.makeText(context, "local received", Toast.LENGTH_SHORT).show();

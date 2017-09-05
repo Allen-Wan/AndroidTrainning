@@ -1,4 +1,4 @@
-package com.example.ex_wanzhipeng001.demo_java.tools.eventbus;
+package com.example.ex_wanzhipeng001.demo_java.libs.eventbus;
 
 import android.content.Intent;
 import android.os.Bundle;

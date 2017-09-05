@@ -15,9 +15,13 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Animation"/>
         <item
-            android:id="@+id/nav_tools"
+            android:id="@+id/nav_libs"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Tools"/>
+            android:title="Libs"/>
+        <item
+            android:id="@+id/nav_patterns"
+            android:icon="@drawable/choose"
+            android:title="Patterns"/>
     </group>
 
     <item android:title="Communicate">

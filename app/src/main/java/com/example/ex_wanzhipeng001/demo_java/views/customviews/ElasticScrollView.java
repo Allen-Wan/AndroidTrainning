@@ -16,7 +16,7 @@ public class ElasticScrollView extends ViewGroup {
     private Scroller mScroller;
     private int mLastY;
     private int mStart;
-    private int mEnd;
+//    private int mEnd;
 
     public ElasticScrollView(Context context) {
         super(context);
@@ -117,6 +117,8 @@ public class ElasticScrollView extends ViewGroup {
                                 0, -mScreenHeight - dScrollY);
                     }
                 }
+                break;
+            default:
                 break;
         }
         postInvalidate();

@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.ex_wanzhipeng001.demo_java.R;
 import com.google.gson.Gson;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -87,7 +88,12 @@ public class TestJavaActivity extends AppCompatActivity {
 
     private void testNewString() {
         byte[] arg3 = new byte[]{};
-        String str3 = new String(arg3);
+        String str3 = null;
+        try {
+            str3 = new String(arg3,"utf-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
         Log.e(TAG,"str3="+str3);
 //        byte[] arg2 = null;
 //        String str2 = new String(arg2);
@@ -95,7 +101,7 @@ public class TestJavaActivity extends AppCompatActivity {
     }
 
     private void testTextViewHtml() {
-        TextView textView = (TextView) findViewById(R.id.tv_test);
+//        TextView textView = (TextView) findViewById(R.id.tv_test);
         String string = "<html><head><title>安全提示</title><style>body{TEXT-ALIGN: center;}#center{MARGIN-RIGHT: auto;" +
                 "MARGIN-LEFT: auto; height:400px;width:400px;}</style></head><body><div id=\"center\">" +
                 "您所输入的密码为初始密码或90天未有更新，请立即" +
@@ -120,8 +126,8 @@ public class TestJavaActivity extends AppCompatActivity {
 //        String regEx = "^\\d{14}$|^\\d{16}$|^\\d{19}$";
 //        String regEx = "^\\d{19}$";
 
-        String str = "鸂";
-        String regEx = "^[^鸂麪鼱隣獱珷瑺瓲疇癄\"“”\'/\\\\|\\[\\]<>《》‘’\\t\\r\\n]*$";
+//        String str = "鸂";
+//        String regEx = "^[^鸂麪鼱隣獱珷瑺瓲疇癄\"“”\'/\\\\|\\[\\]<>《》‘’\\t\\r\\n]*$";
 ////        String regEx = "^[^\uE816\uE817\uE818\uE81E\uE826\uE82B\uE82C\uE831\uE832\uE83B\uE843\uE854\uE855\uE864鸂麪鼱隣獱珷瑺瓲疇癄\uE863\\\"“”\\'/\\\\\\\\|\\\\[\\\\]<>《》‘’\\\\t\\\\r\\\\n]*$\n";
 //
 //        // 编译正则表达式
@@ -131,7 +137,7 @@ public class TestJavaActivity extends AppCompatActivity {
 //////        boolean rs = matcher.matches();
 ////        boolean rs = matcher.find();
 //////        boolean rs = matcher.matches();
-        Log.e(TAG, "===1" + str.matches(regEx));
+//        Log.e(TAG, "===1" + str.matches(regEx));
 
 //        // 要验证的字符串
 //        String str2 = "baike.xsoftlab.net";
@@ -174,6 +180,53 @@ public class TestJavaActivity extends AppCompatActivity {
 //        }
 
 
+//        '最多输入3位数字并且小数点后最多有一位数!
+        String money = "99";
+        String money1 = "999";
+        String money2 = "9999";
+        String money3 = "999.0";
+        String money4 = "999.02";
+        String money5 = "999.001";
+        String money6 = "9999.001";
+        String money7 = "0.01";
+        String money8 = "0.1";
+        String money9 = "00.1";
+        String money10 = "00.01";
+        String money11 = "0.001";
+        String money12 = "";
+        String money13 = "null";
+        String money14 = "0";
+        String money15 = "0.92";
+        String money16 = "0.02";
+        String money17 = "01.0";
+        String money18 = "110.0";
+
+//        String moneyRegEx = "^(\\d{1,3}\\.\\d{1,1}|\\d{1,3})";
+//        String moneyRegEx = "/^(\d{1,3}\.\d{1,1}|\d{1,3})$/";
+//        String moneyRegEx = "/^(\\d{1,3}\\.\\d{1,1}|\\d{1,3})$/";
+        String moneyRegEx = "^(0|[1-9]\\d{0,2})(\\.\\d{1,1})?$";
+
+        Log.e(TAG, money+"==matches===" + money.matches(moneyRegEx));
+        Log.e(TAG, money1+"==matches===" + money1.matches(moneyRegEx));
+        Log.e(TAG, money2+"==matches===" + money2.matches(moneyRegEx));
+        Log.e(TAG, money3+"==matches===" + money3.matches(moneyRegEx));
+        Log.e(TAG, money4+"==matches===" + money4.matches(moneyRegEx));
+        Log.e(TAG, money5+"==matches===" + money5.matches(moneyRegEx));
+        Log.e(TAG, money6+"==matches===" + money6.matches(moneyRegEx));
+        Log.e(TAG, money11+"==matches===" + money11.matches(moneyRegEx));
+        Log.e(TAG, money7+"==matches===" + money7.matches(moneyRegEx));
+        Log.e(TAG, money8+"==matches===" + money8.matches(moneyRegEx));
+        Log.e(TAG, money9+"==matches===" + money9.matches(moneyRegEx));
+        Log.e(TAG, money10+"==matches===" + money10.matches(moneyRegEx));
+        Log.e(TAG, money12+"==matches===" + money12.matches(moneyRegEx));
+        Log.e(TAG, money13+"==matches===" + money13.matches(moneyRegEx));
+        Log.e(TAG, money14+"==matches===" + money14.matches(moneyRegEx));
+        Log.e(TAG, money15+"==matches===" + money15.matches(moneyRegEx));
+        Log.e(TAG, money16+"==matches===" + money16.matches(moneyRegEx));
+        Log.e(TAG, money17+"==matches===" + money17.matches(moneyRegEx));
+        Log.e(TAG, money18+"==matches===" + money18.matches(moneyRegEx));
+
+
     }
 
     private void testAddDouble() {
@@ -213,7 +266,7 @@ public class TestJavaActivity extends AppCompatActivity {
     }
 
     private void testFor() {
-        for (int i = 5; i < 3; i++) {
+        for (int i = 1; i < 3; i++) {
             Log.e(TAG, "========" + i);
         }
     }

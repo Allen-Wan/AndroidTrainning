@@ -18,7 +18,8 @@ import android.widget.Toast;
 import com.example.ex_wanzhipeng001.demo_java.R;
 import com.example.ex_wanzhipeng001.demo_java.animations.AnimationMainActivity;
 import com.example.ex_wanzhipeng001.demo_java.basis.android.BasisMainActivity;
-import com.example.ex_wanzhipeng001.demo_java.tools.ToolsMainActivity;
+import com.example.ex_wanzhipeng001.demo_java.libs.LibsMainActivity;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.view.PatternMainActivity;
 import com.example.ex_wanzhipeng001.demo_java.views.ViewsMainActivity;
 
 public class MainActivity extends AppCompatActivity
@@ -97,8 +98,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_animation) {
             Intent intent = new Intent(this, AnimationMainActivity.class);
             startActivity(intent);
-        } else if (id == R.id.nav_tools) {
-            Intent intent = new Intent(this, ToolsMainActivity.class);
+        } else if (id == R.id.nav_libs) {
+            Intent intent = new Intent(this, LibsMainActivity.class);
+            startActivity(intent);
+        }else if (id == R.id.nav_patterns) {
+            Intent intent = new Intent(this, PatternMainActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_share) {
             Toast.makeText(this, "暂未开放", Toast.LENGTH_SHORT).show();

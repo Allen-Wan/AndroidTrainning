@@ -92,6 +92,7 @@ public class BasisMainActivity extends AppCompatActivity implements View.OnClick
             case R.id.btn_testService:
                 Intent intent9 = new Intent(BasisMainActivity.this, ServiceActivity.class);
                 startActivity(intent9);
+                break;
             case R.id.btn_testAlarmManager:
                 Intent intent10 = new Intent(BasisMainActivity.this, AlarmManagerActivity.class);
                 startActivity(intent10);

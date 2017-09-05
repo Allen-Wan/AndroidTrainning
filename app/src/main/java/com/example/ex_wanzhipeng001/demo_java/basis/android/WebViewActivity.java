@@ -15,6 +15,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -130,7 +131,8 @@ public class WebViewActivity extends AppCompatActivity {
                     if (200 == connection.getResponseCode()) {
                         InputStream inputStream = connection.getInputStream();
                         //读取输入流
-                        bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                        // TODO  --- by wanzp on 17/8/25.
+                        bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"utf-8"));
                         StringBuilder response = new StringBuilder();
                         String line;
                         while ((line = bufferedReader.readLine()) != null){
@@ -172,6 +174,8 @@ public class WebViewActivity extends AppCompatActivity {
      */
     public static String postDownloadJson(String path,String post){
         URL url = null;
+        PrintWriter printWriter = null;
+        BufferedInputStream bis = null;
         try {
             url = new URL(path);
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -182,13 +186,14 @@ public class WebViewActivity extends AppCompatActivity {
             httpURLConnection.setDoOutput(true);
             httpURLConnection.setDoInput(true);
             // 获取URLConnection对象对应的输出流
-            PrintWriter printWriter = new PrintWriter(httpURLConnection.getOutputStream());
+            printWriter = new PrintWriter(new OutputStreamWriter(httpURLConnection.getOutputStream(), "utf-8"));
+
             // 发送请求参数
             printWriter.write(post);//post的参数 xx=xx&yy=yy
             // flush输出流的缓冲
             printWriter.flush();
             //开始获取数据
-            BufferedInputStream bis = new BufferedInputStream(httpURLConnection.getInputStream());
+            bis = new BufferedInputStream(httpURLConnection.getInputStream());
             ByteArrayOutputStream bos = new ByteArrayOutputStream();
             int len;
             byte[] arr = new byte[1024];
@@ -200,6 +205,18 @@ public class WebViewActivity extends AppCompatActivity {
             return bos.toString("utf-8");
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if (printWriter != null) {
+                printWriter.close();
+            }
+            if (bis != null) {
+                try {
+                    bis.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
         return null;
     }

@@ -201,4 +201,11 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_item_list">Items</string>
     <string name="title_item_detail">Item Detail</string>
+    <string name="dummy">dummy</string>
+    <string name="toggle_on">toggle</string>
+    <string name="toggle_content">toggle_content</string>
+    <string name="upload">upload</string>
+    <string name="download">download</string>
+    <string name="sample">sample</string>
+    <string name="longtext">一旦约束被创建, 你可以修改点击 UI 生成器左上的 这里写图片描述按钮修改 “virtual device to render with”. 选择一个不同的设备, 如 Nexus 6P 或者 Nexus 9 以检查布局渲染正确.  你现在已经看到使用约束系统的整个系列: 创建手工约束, 使用自动连接约束, 还有使用推理引擎约束.  自动连接和推理通过布局引擎断定如何为布局中各个元素创建约束协助你. 然后你可以进一步按照你认为合适的方式自由地修改这些约束, 无论它们是由自动连接还是推理引擎生成的.</string>
 </resources>
