@@ -20,7 +20,7 @@
             android:title="Libs"/>
         <item
             android:id="@+id/nav_patterns"
-            android:icon="@drawable/choose"
+            android:icon="@drawable/ic_info_black_24dp"
             android:title="Patterns"/>
     </group>
 
