@@ -7,7 +7,8 @@ import android.view.View;
 
 import com.example.ex_wanzhipeng001.demo_java.R;
 import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.login.view.MVPLoginMainActivity;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.view.MVPWeatherMainActivity;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather.view.MVPWeatherMainActivity;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather2.view.MVPWeather2MainActivity;
 
 public class PatternMainActivity extends AppCompatActivity {
 
@@ -28,6 +29,14 @@ public class PatternMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PatternMainActivity.this, MVPWeatherMainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btn_weather2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PatternMainActivity.this, MVPWeather2MainActivity.class);
                 startActivity(intent);
             }
         });

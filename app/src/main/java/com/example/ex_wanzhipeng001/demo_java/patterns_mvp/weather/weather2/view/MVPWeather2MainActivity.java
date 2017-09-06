@@ -1,4 +1,4 @@
-package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.view;
+package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather2.view;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -11,14 +11,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ex_wanzhipeng001.demo_java.R;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.model.bean.Weather;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.model.bean.WeatherInfo;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.presenter.WeatherPresenterImpl;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather2.contract.WeatherContract;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather2.model.bean.Weather;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather2.model.bean.WeatherInfo;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather2.presenter.WeatherPresenterImpl;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MVPWeatherMainActivity extends AppCompatActivity implements IWeatherView {
+public class MVPWeather2MainActivity extends AppCompatActivity implements WeatherContract.IWeatherView {
 
     @BindView(R.id.et_city_no)
     EditText mEtCityNo;

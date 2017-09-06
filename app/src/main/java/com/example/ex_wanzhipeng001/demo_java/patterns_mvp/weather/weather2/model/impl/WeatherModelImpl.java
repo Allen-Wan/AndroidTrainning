@@ -1,10 +1,10 @@
-package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.model.impl;
+package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather2.model.impl;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.model.IWeatherModel;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.model.bean.Weather;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.presenter.OnWeatherListener;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather2.model.IWeatherModel;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather2.model.bean.Weather;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather2.presenter.OnWeatherListener;
 import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.util.volley.VolleyRequest;
 
 /**
@@ -12,27 +12,11 @@ import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.util.volley.V
  * 天气Model实现
  */
 
-public class WeatherModelImpl implements IWeatherModel{
+public class WeatherModelImpl implements IWeatherModel {
 
     @Override
     public void loadWeather(String cityNo, final OnWeatherListener listener) {
 //        /*数据层操作*/
-//        VolleyRequest.newInstance().newGsonRequest("http://www.weather.com.cn/data/sk/" + cityNo + ".html", Weather.class, new Response.Listener<Weather>() {
-//            @Override
-//            public void onResponse(Weather response) {
-//                if (response != null) {
-//                    listener.onSuccess(response);
-//                }else {
-//                    listener.onError();
-//                }
-//
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                listener.onError();
-//            }
-//        });
         VolleyRequest.newInstance().newGsonRequest("http://www.weather.com.cn/data/sk/" + cityNo + ".html",
                 Weather.class, new Response.Listener<Weather>() {
                     @Override

@@ -1,9 +1,9 @@
-package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.presenter;
+package com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather.presenter;
 
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.model.IWeatherModel;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.model.bean.Weather;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.model.impl.WeatherModelImpl;
-import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.view.IWeatherView;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather.model.IWeatherModel;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather.model.bean.Weather;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather.model.impl.WeatherModelImpl;
+import com.example.ex_wanzhipeng001.demo_java.patterns_mvp.weather.weather.view.IWeatherView;
 
 /**
  * Created by ex-wanzhipeng001 on 17/9/5.

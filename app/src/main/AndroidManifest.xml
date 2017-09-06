@@ -203,8 +203,8 @@
         </activity>
         <activity android:name=".patterns_mvp.PatternMainActivity">
         </activity>
-        <activity android:name=".patterns_mvp.weather.view.MVPWeatherMainActivity">
-        </activity>
+        <activity android:name=".patterns_mvp.weather.weather.view.MVPWeatherMainActivity"> </activity>
+        <activity android:name=".patterns_mvp.weather.weather2.view.MVPWeather2MainActivity"> </activity>
     </application>
 
 </manifest>
